@@ -1,1 +1,17 @@
-<p>resultados works!</p>
+
+<div class="row row-cols-1 row-cols-md-2 g-4">
+  <div 
+  *ngFor="let gif of resultados"
+  class="col-md-4 col-sm-6">
+
+    <div class="card">
+      <img [src]="gif.images.downsized_medium.url" class="card-img-top" [alt]="gif.title">
+      <div class="card-body">
+        <p class="card-text">
+          {{ gif.title }}
+        </p>
+      </div>
+    </div>
+
+  </div>
+</div>
